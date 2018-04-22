@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Matching Brackets</title>
+  
+  <!-- CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
+</head>
+<body>
+    
+  <div class="container text-center">
+    <h1 class="display-4 m-5">Matching Brackets</h1>
+    <div>
+        <p class="lead">Verificador de balanceamento de parênteses, colchetes e chaves </p>
+    </div>
+    
+    <form method="POST">
+                {% csrf_token %}
+                
+    
+    <div class="form-group text-center row">
+            <div class="col-md-10">
+                {{form.value}}
+            </div>
+            <div class="text-center col-md-2">
+                <button type="submit" class="btn btn-primary btn-lg m-2">Verificar</button>
+            </div>
+    </div>
+    </form>
+    <div class="m-5">
+        <h1 style="letter-spacing:10px">{{value|safe}}</h1>
+    </div>
+    <div>
+        <p class="text-muted">{{result}} - {{comment}}</p>
+        
+    </div>
+  </div>
+
+
+  <!-- Primeiro o jQuery, depois o Popper.js, e depois o Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+  
+  <script>
+      document.getElementById("query").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("()[]{}\b".indexOf(chr) < 0)
+           return false;
+       };
+  </script>
+  
+</body>
+</html>
