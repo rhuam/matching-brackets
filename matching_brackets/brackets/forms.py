@@ -2,6 +2,12 @@ from django.forms import ModelForm, TextInput
 from brackets.models import Query
 from brackets.processor import Processor
 
+#####
+# Form: Essa classe define o comportamento do formulario, seus campos e parametros
+# o metodo is_valid() verifica se a entrada possui apenas caracteres validos.
+#####
+
+
 class QueryForm(ModelForm):
     class Meta:
         model = Query
@@ -11,9 +17,6 @@ class QueryForm(ModelForm):
                 'placeholder': '{[()]}', 'style':'letter-spacing:5px;',  'required': ''
             })
         }
-    
-    def getValue(self):
-        return self.value
     
     def is_valid(self):
         self.ValidationError = "ERRO: Entrada inv&aacute;lida"

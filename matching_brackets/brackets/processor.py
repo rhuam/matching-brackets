@@ -1,4 +1,15 @@
 # -*- coding: utf-8 -*-
+
+#####
+# Processor: Essa classe eh responsavel por analisar as entradas e verificar se os parentese, chaves e colchetes
+# estao balanceados.
+# O metodo principal eh o findErro() que procura apenas pelos erros mais simples, otimizando o desempenho
+# caso exista. Caso contrario, o metodo replaceAll() remove de forma interativa todos os pares balanceados,
+# se ao final de sua execucao a string nao for vazia, significa que exite uma desbalanceamento.
+# Por fim a classe viewText() eh usada apenas para gerar a string de impressao na view, marcando o elemento
+# desbalanceado.
+#####
+
 class Processor():
     def __init__(self, value):
        self.value = value

@@ -4,7 +4,7 @@ from brackets.processor import Processor
 
 #####
 # View: Verifica se a request eh GET ou POST
-# intancia os objetos: query (Informacoes do formulario), proc (Processador para validacao da entrada)
+# Intancia os objetos: query (Informacoes do formulario), proc (Processador para validacao da entrada)
 # value (valores de retorno, onde 0- Resultado, 1- Entrada, 2- Comentario sobre a entrada)
 #####
 
