@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Processor():
     def __init__(self, value):
        self.value = value
@@ -5,12 +6,12 @@ class Processor():
        
     def viewText(self, i=None):
         if (i == -1):
-            return "Balanceado", "<span style='color: green'>" + self.value + "</span>", "Essa entrada atende a todas restricoes."
+            return "Balanceado", "<span style='color: green'>" + self.value + "</span>", "Essa entrada atende a todas restri&ccedil;&otilde;es."
         elif(i == len(self.value)):
-            return "Nao Balanceado", "<span style='color: red'>" + self.value + "</span>", "Ha um problema de balanceamento nessa entrada."
+            return "N&atilde;o Balanceado", "<span style='color: red'>" + self.value + "</span>", "H&aacute; um problema de balanceamento nessa entrada."
         else:
             text = self.value
-            text = "Nao Balanceado", text[:i] + "<span style='color: red'>" + text[i] + "</span>" + text[i:], "Ha um problema de balanceamento com o caracter '"+text[i]+"' nessa entrada."
+            text = "N&atilde;o Balanceado", text[:i] + "<span style='color: red'>" + text[i] + "</span>" + text[i+1:], "H&aacute; um problema de balanceamento com o caracter '"+text[i]+"' nessa entrada."
             return text
         
     def replaceAll(self):
