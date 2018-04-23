@@ -24,7 +24,7 @@ E um segundo método, que verifica o balanceamento par a par, que possui um cust
 
 ### Materiais
 Para desenvolver essa solução foi usado a linguagem de programação Python e o framework Django.
-Os testes foram feitos em uma instância virtual do Cloud9: [Clonar](https://c9.io/rhuam/matching-brackets) | [Testar](https://django-rhuam.c9users.io)
+Os testes foram feitos em uma instância virtual do Cloud9: [Clonar](https://ide.c9.io/rhuam/django) | [Testar](https://django-rhuam.c9users.io)
 
 # Histórico
 ## Solução do problema
@@ -59,6 +59,13 @@ No Django, foram criados 5 arquivos para realizar todas as tarefas e exibir o fo
 - [forms.py](matching_brackets/brackets/forms.py): Nesse arquivo é definido o formulário que será exibido para o usuário, seus campos e características, além disso, o método **is_valid()** resposável por verificar se a entrada não contém nenhum caracter inválido para a aplicação.
 - [views.py](matching_brackets/brackets/views.py): Possui a lógica de exibição das view, onde verifica-se se a entrada foi solicitada via GET ou POST, envia a entrada para processamento, e retorna com o resultado para renderizar a página para o usuário.
 - [index.html](matching_brackets/brackets/templates/index.html): Contém a estrutura HTML básica da página, as referências para o bootstrap, e alguns comandos de seleção, para exibir ou ocultar elementos dados os valores recebidos pela view.
+
+# Funcionalidade Atribuídas
+Pelo fato de usar o Django, foi implementado:
+- Interface WEB/MOBILE para consulta
+- Consulta via GET (Ex: https://django-rhuam.c9users.io/[()[]])
+- Validação de entradas
+
 
 # Conclusão
 O problema de balanceamento do Brackets em si, é relativamente fácil, e se torna interessante a medida que tentamos diminuir sua complexidade, uso de estruturas de dados como vetores e listas ou até mesmo recursão, são possibilidades de soluções eficientes. O grande aprendizado nesse experimento foi o framwork Django, e a possibilidade de criar uma estrutura web toda em menos de 24 horas, mesmo sem nenhum conhecimento.
